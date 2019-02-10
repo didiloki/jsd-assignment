@@ -6,7 +6,11 @@
 
 // Write your answers inside this file, at the places where it's indicated by the comments.
 
-// 1. Suppose that we wanted to create a browser-based calendar program for keeping track of things. In comments, list at least three reasonable abstractions that you might use to build this program; for each abstraction, list out at least two properties and behaviors that it would make sense for that abstraction to have. Below is an example - please write your answer in the same format.
+// 1. Suppose that we wanted to create a browser-based calendar program for keeping track of things.  
+//In comments,list at least three reasonable abstractions that you might use to build this program; for each abstraction, 
+//list out at least two properties and behaviors that it would make sense for that abstraction to have. 
+//Below is an example - please write your answer in the same format.
+  
   // 'Car'
   // Description: Our app manages car sales.
   // Every 'car' has
@@ -20,9 +24,18 @@
 
 // Answer Starts Here
 
+// 'Calendar'
+// Description: Keep track of things
+// Every 'Calendar' Has
+// - a 
+// Every 'Calendar' can
+// - make event
+// 
+
 // Answer Ends Here
 
-// 2. Create an Object literal that lines up with the following description. Store it in the variable 'pet_owner', below. Be sure to give it reasonable values for each of its properties.
+// 2. Create an Object literal that lines up with the following description. Store it in the variable 'pet_owner', 
+// below. Be sure to give it reasonable values for each of its properties.
 
   // 'Owner'
   // Description: We are making an app for a veterinary clinic - it manages pets' vaccinations.
@@ -30,13 +43,19 @@
   // - a name
   // - an address
 
-  var pet_owner;
+  // var pet_owner;
 
   // Answer Starts Here
-  
+  var pet_owner = { 
+      owner : "Muneera",
+      address : "Riyadh"
+  }
+  // console.log(pet_owner)
+
   // Answer Ends Here
   
-  // 3. Create an Object literal that lines up with the following description. Store it in the variable `some_pet`, below.
+  // 3. Create an Object literal that lines up with the following description. 
+  // Store it in the variable `some_pet`, below.
   
     // Pet
     // Description: We are making an app for a veterinary clinic - it manages pets' vaccinations.
@@ -48,26 +67,40 @@
     // Every pet can:
     // - make noise (each pet makes its own unique noise, as specified by `noise`.
   
-  var some_pet;
+  // var some_pet;
   
   // Answer Starts Here
-  
+  var some_pet = {
+      name: "Dog1",
+      species: "la",
+      breed: "idk",
+      noise: "brake",
+  }
   // Answer Ends Here
   
   // 4. Create a constructor function for Pet objects, as described above. The constructor function should be responseible for setting
   //    the values of `name`, `species`, `breed`, and `noise`. The constructor function should also give each pet a method called `makeNoise`,
   //    which behaves as described in Q3.
   
-  var Pet;
+  // var Pet;
   // Answer Starts Here
   
+  var pet= {
+    constructor(some_pet){
+      this.name = name
+      this.specise = specise 
+      this.breed = breed 
+      this.noise = noise 
+    }
+    
+  }
   // Answer Ends Here
   
-  module.exports = {
-    answerTwo: pet_owner,
-    answerThree: some_pet,
-    answerFour: Pet
-  }
+  // module.exports = {
+  //   answerTwo: pet_owner,
+  //   answerThree: some_pet,
+  //   answerFour: Pet
+  // }
   
   /////////////////////////////////////////////////////////////
   

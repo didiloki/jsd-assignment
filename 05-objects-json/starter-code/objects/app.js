@@ -19,6 +19,37 @@
   // - park
 
 // Answer Starts Here
+//1
+//'date'
+//Description: Our app manages the date 
+// every 'date' has 
+// - day
+// - month
+// - year
+//every 'date' can 
+// - alert
+// - notes
+//2
+//'special day' 
+//Description: special day it contins a special event
+//every 'special day' has
+// - day
+// - hour
+// - mins
+// Every 'special day' can
+// - email
+// - notification
+//3
+//'note'
+//Description: put a note in specific date
+// Every 'note' has 
+// - title
+// - body
+// - location
+// Every 'note' can 
+// - invite people to share the note with 
+// - add attachment to the notes 
+
 
 // Answer Ends Here
 
@@ -31,9 +62,12 @@
   // - an address
 
   var pet_owner;
-
+ 
   // Answer Starts Here
-  
+  pet_owner = {
+    name: 'badr',
+    address : 'Riyadh'
+  }
   // Answer Ends Here
   
   // 3. Create an Object literal that lines up with the following description. Store it in the variable `some_pet`, below.
@@ -50,8 +84,18 @@
   
   var some_pet;
   
-  // Answer Starts Here
   
+  // Answer Starts Here
+  some_pet = {
+    name : "" ,
+    species:"",
+    breed: "",
+    noise: "",
+    makeNoise: function(){
+      return this.makeNoise
+    }
+  }
+
   // Answer Ends Here
   
   // 4. Create a constructor function for Pet objects, as described above. The constructor function should be responseible for setting
@@ -60,7 +104,17 @@
   
   var Pet;
   // Answer Starts Here
-  
+  Pet = function(name,species,breed,noise,makeNoise){
+    this.name=name
+    this.species=species
+    this.breed=breed
+    this.noise=noise
+    this.makeNoise=function(){
+      return this.noise
+    }
+
+
+  }
   // Answer Ends Here
   
   module.exports = {

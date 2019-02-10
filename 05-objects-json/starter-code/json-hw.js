@@ -7,7 +7,8 @@ var jsonString = '{ "title": "Uploads from everyone", "link": "https://www.flick
 1. Convert the string `jsonString` to a Javascript Object and store it in a variable
 called `flickerObj`
 */
-
+var flickerObj = JSON.stringify(jsonString)
+console.log(flickerObj)
 
 
 

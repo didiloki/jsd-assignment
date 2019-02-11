@@ -7,7 +7,8 @@ var jsonString = '{ "title": "Uploads from everyone", "link": "https://www.flick
 1. Convert the string `jsonString` to a Javascript Object and store it in a variable
 called `flickerObj`
 */
-
+flickerObj = (JSON.parse(jsonString))
+//console.log(flickerObj)
 
 
 
@@ -15,12 +16,57 @@ called `flickerObj`
 2. Iterate (this means 'use a loop') and do a console.log of each of the item titles
 with the date the photo was taken. The first console.log should return the following:
 "What a surprise in lyon. 2016-02-23T06:47:30-08:00"
-*/
+ */
+var task1 = ""
+json_task1 = ""
+Object.keys(flickerObj).forEach(function(key){
+    
+    var inner_flickerObj = (flickerObj[key]);
 
+    Object.keys(inner_flickerObj).forEach(function(key){
+        var inner_flickerObj_2 = (inner_flickerObj[key])
+        
+        Object.keys(inner_flickerObj_2).forEach(function(key){
+
+            var title1 = ""
+            var date1 = ""
+
+           if(key == "title" ){
+                title1 = (inner_flickerObj_2[key])
+
+            }else if (key == "date_taken"){
+                date1 = (inner_flickerObj_2[key])
+            }
+            task1 = (title1 + date1)
+            
+        })
+    })
+
+})
 
 /*
 3. Create a new array called 'links'. Iterate through the items array in flickerObj and store the the links to each item in the 'links' array.
 */
+links = []
+
+Object.keys(flickerObj).forEach(function(key){
+    link_flicker = (key,flickerObj[key])
+
+    
+        Object.keys(link_flicker).forEach(function(key){
+         var inner_link = (key,link_flicker[key])
+            
+            Object.keys(inner_link).forEach(function(key){
+                if(key == "link"){
+                    links.push('The link is: ' + inner_link[key])
+                }
+         
+
+            })     
+    })
+    console.log(links)
+})
+
 
 
 
@@ -28,3 +74,6 @@ with the date the photo was taken. The first console.log should return the follo
 4. Convert the 'links' array into a JSON string. Do a console.log of that JSON string, copy the results from the terminal and paste them into the input box at http://jsonlint.com/
 Did it create a valid JSON string?
 */ 
+links_json = (JSON.stringify(links))
+console.log(links_json)
+//Yes

@@ -28,6 +28,8 @@ var notActuallyJSON = {
 // The following line is valid JavaScript, but the object is not written in valid JSON syntax.
 // [ Step 2 ] Use JSONLint to validate the object in the following line; then, edit the object so it passes the validator.
 var eddie = {name:"Eddie Vedder", age:49};
+var validate =(JSON.stringify(eddie))
+console.log(validate)
 
 // We frequently want to turn a JavaScript object into a JSON string, and vice versa.
 // JavaScript has a built-in global object called `JSON` that contains a number of useful methods for manipulating JSON.
@@ -71,7 +73,13 @@ var grungeAlbums = {
     }
   ]
 };
+var grungeAlbumsJSON =(JSON.stringify(grungeAlbums))
 
+if (grungeAlbumsJSON == grungeAlbums){
+    console.log("They are the same!")
+} else {
+    console.log("They are not the same!")
+}
 
 // Imagine that we only had JSON to work with, and wanted to convert it to a JS Object.
 // Fortunately, the `JSON` global object converts both ways - to and from JSON.
@@ -85,6 +93,23 @@ var grungeAlbums = {
 //  Album: Album name
 //  Artist: Artist name
 //  Units sold: 31234
+
+var back_to_js = (JSON.parse(grungeAlbumsJSON))
+Object.keys(back_to_js).forEach(function(key) {
+   var inner_keys = (key, back_to_js[key]);
+   //console.log(inner_keys)
+
+    Object.keys(inner_keys).forEach(function(key){
+
+        var inner_objects = (inner_keys[key])
+        console.log("\n")
+       
+        Object.keys(inner_objects).forEach(function(key){
+           console.log(key , " : " ,inner_objects[key])
+          
+        })   
+    })   
+})
 
 // [ Step 5 ] Create a custom JSON using the JSON validator from Step 1.
 // Convert it back to a JavaScript object, change it, and then convert it back to JSON again. Compare it to your original - how has it changed?

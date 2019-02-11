@@ -19,7 +19,29 @@
   // - park
 
 // Answer Starts Here
-
+class Car{
+  constructor(make,model,year){
+    
+    this.make = make;
+    this.model = model;
+    this.year = year;
+  }
+  drive(){
+    let driving = ("This " + this.make +" "+ this.model +" "+this.year+ " is being driven")
+    return driving
+  }
+  park(){
+    let parking = ("This " + this.make +" "+ this.model +" "+this.year+ " is parked")
+    return parking
+  }
+  brake(){
+    let braking = ("This " + this.make +" "+ this.model +" "+this.year+ " is being broken")
+    return braking
+  }
+  
+}
+const car1 = new Car("Ford","Fusion","2019")
+console.log(car1.drive())
 // Answer Ends Here
 
 // 2. Create an Object literal that lines up with the following description. Store it in the variable 'pet_owner', below. Be sure to give it reasonable values for each of its properties.
@@ -32,8 +54,22 @@
 
   var pet_owner;
 
+
   // Answer Starts Here
-  
+  class Owner{
+    constructor(name,address){
+      this.name = name;
+      this.address = address;
+    }
+    sign_up(){
+      let register = ("The Owner's name is "+this.name+" And the address is " + this.address)
+      return register
+    }
+    
+  }
+  const owner1 = new Owner("Bader","Riyadh")
+  pet_owner = owner1.sign_up()
+  console.log(owner1.sign_up())
   // Answer Ends Here
   
   // 3. Create an Object literal that lines up with the following description. Store it in the variable `some_pet`, below.
@@ -51,15 +87,32 @@
   var some_pet;
   
   // Answer Starts Here
-  
+  class Pet{
+    constructor(name,species,breed,noise){
+      this.name = name
+      this.species = species
+      this.breed = breed
+      this.noise = noise
+    }
+    make_noise(){
+      let pet_noise = (this.name + " can  " + this.noise)
+      return pet_noise
+    }
+
+  }
+   pet1 = new Pet("Bobby","monkey","mandrill","gibber")
+   some_pet = pet1
+  console.log(pet1.make_noise())
   // Answer Ends Here
   
   // 4. Create a constructor function for Pet objects, as described above. The constructor function should be responseible for setting
   //    the values of `name`, `species`, `breed`, and `noise`. The constructor function should also give each pet a method called `makeNoise`,
   //    which behaves as described in Q3.
   
-  var Pet;
+  var pet;
+  
   // Answer Starts Here
+  pet = pet1.make_noise()
   
   // Answer Ends Here
   

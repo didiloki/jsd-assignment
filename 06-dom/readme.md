@@ -2,6 +2,7 @@
 
 One of the great things about JavaScript is that it lets you manipulate the contents of a Web page in real-time. This means that we can use JavaScript to create a digital clock, embedded in the Web page, that updates every second.
 
+> Todays class can be found in the [dom](dom) folder
 ## Digital Clock
  To build a digital clock we need to utilize the date class from the JavaScript Library
 

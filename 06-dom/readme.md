@@ -22,7 +22,9 @@ i.e. `01:30:03 PM`
 >You might want to check out the `.toggle()` method in the JQuery library.
 
 ## Analogue Clock
-We all loved that old fashion grandfather clock. 
+We all loved that old fashion grandfather clock.
+
+# ![](http://gtsparkplugs.com/images/Analog-Clock-Javascript.gif)
 
 ##### Img folder has all required images
 

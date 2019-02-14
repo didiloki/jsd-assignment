@@ -6,7 +6,10 @@
 
 // Write your answers inside this file, at the places where it's indicated by the comments.
 
-// 1. Suppose that we wanted to create a browser-based calendar program for keeping track of things. In comments, list at least three reasonable abstractions that you might use to build this program; for each abstraction, list out at least two properties and behaviors that it would make sense for that abstraction to have. Below is an example - please write your answer in the same format.
+// 1. Suppose that we wanted to create a browser-based calendar program for keeping track of things.
+// In comments, list at least three reasonable abstractions that you might use to build this program; 
+//for each abstraction, list out at least two properties and behaviors that it would make sense for that 
+//abstraction to have. Below is an example - please write your answer in the same format.
   // 'Car'
   // Description: Our app manages car sales.
   // Every 'car' has
@@ -19,6 +22,17 @@
   // - park
 
 // Answer Starts Here
+
+  // 'Calender'
+  // Description: Our app manages dates.
+  // Every 'Calender' has
+  // - a date
+  // - a note
+  // - a reminder
+  // Every 'calender' can
+  // - mark a date
+  // - write a note
+  // - set a reminder
 
 // Answer Ends Here
 
@@ -33,6 +47,11 @@
   var pet_owner;
 
   // Answer Starts Here
+
+  pet_owner={
+    name: 'Sara',
+    address: 'Riyadh'
+  }
   
   // Answer Ends Here
   
@@ -52,15 +71,37 @@
   
   // Answer Starts Here
   
+  some_pet= {
+    name: 'Choco',
+    species: 'Feline',
+    breed: 'American',
+    noise: 'meow',
+    makeNoise: function(){
+      console.log(some_pet.noise)
+    }
+  }
+
   // Answer Ends Here
   
   // 4. Create a constructor function for Pet objects, as described above. The constructor function should be responseible for setting
   //    the values of `name`, `species`, `breed`, and `noise`. The constructor function should also give each pet a method called `makeNoise`,
   //    which behaves as described in Q3.
   
-  var Pet;
-  // Answer Starts Here
+  var Pet= function(name, species, breed, noise){
+    this.name= name;
+    this.species= species;
+    this.breed= breed;
+    this.noise= noise;
+    this.makeNoise = function(){
+      console.log(this.noise)
+    }
+  }
   
+  var pet1 = new Pet('Sandy', 'Feline', 'American', 'meow')
+
+  // console.log(pet1)
+  // pet1.makeNoise()
+
   // Answer Ends Here
   
   module.exports = {

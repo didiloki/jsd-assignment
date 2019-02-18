@@ -1,0 +1,86 @@
+html , body, .container {
+    height: 100%;
+
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.analogue_clock {
+    position: relative;
+    width:400px;
+    height:400px;
+    background: url(clock_face.jpg);
+    border-radius:400px;
+    border: 10px solid #000;
+    z-index: -1;
+}
+.analogue_clock::after {
+    position: absolute;
+    content:"";
+    background: #000;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 50%;
+}
+.hands {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.digi_clock{
+    height:20px;
+    width: 150px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border-radius:100px;
+    border: 5px solid #000;
+    justify-content: center;
+    background-color: #000;
+    text-align: center;
+}
+.am_pm{
+    height:20px;
+    width: 50px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border-radius:100px;
+    border: 5px solid #000;
+    justify-content: center;
+    background-color: #000;
+    text-align: center;
+}
+button{
+    background-color: #000;
+    position: absolute;
+    top:15%;
+    left:47%;
+    padding: .5rem .5rem;
+    margin:  0px;
+    text-decoration: none;
+    font-size: .5rem;
+    display:inline-block;
+    border: none;
+    color:white;
+    line-height: 1;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius:100px;
+    border: 5px solid #000;
+}
+

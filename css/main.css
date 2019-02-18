@@ -1,0 +1,30 @@
+
+ .analogue_clock{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: -170px 0 0 -170px;
+ }
+
+#face{
+    float: left;
+    position: fixed;
+}
+
+.hand{
+    float: left;
+    position: absolute;
+}
+
+#hour_hand{
+    transform: rotate(0deg);
+}
+
+#minute_hand{
+    transform: rotate(0deg);
+}
+
+#second_hand{
+    transform: rotate(0deg);
+}

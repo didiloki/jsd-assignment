@@ -6,7 +6,9 @@
 
 // Write your answers inside this file, at the places where it's indicated by the comments.
 
-// 1. Suppose that we wanted to create a browser-based calendar program for keeping track of things. In comments, list at least three reasonable abstractions that you might use to build this program; for each abstraction, list out at least two properties and behaviors that it would make sense for that abstraction to have. Below is an example - please write your answer in the same format.
+// 1. Suppose that we wanted to create a browser-based calendar program for keeping track of things. In comments, list at least three reasonable abstractions that you might use to build this program; for each abstraction, list out at least two properties and behaviors that it would make sense for that abstraction to have.
+// Below is an example - please write your answer in the same format.
+
   // 'Car'
   // Description: Our app manages car sales.
   // Every 'car' has
@@ -19,6 +21,17 @@
   // - park
 
 // Answer Starts Here
+
+//'day'
+// Description:Our app manages events during days
+//Every 'day' has
+// tasks
+// events
+//Every 'day' can
+// - add task
+//- delete task
+//- delete event
+//- add event
 
 // Answer Ends Here
 
@@ -33,7 +46,10 @@
   var pet_owner;
 
   // Answer Starts Here
-  
+  pet_owner={
+    name:'Karim',
+    address: 'Riyadh'
+  }
   // Answer Ends Here
   
   // 3. Create an Object literal that lines up with the following description. Store it in the variable `some_pet`, below.
@@ -51,7 +67,18 @@
   var some_pet;
   
   // Answer Starts Here
-  
+  some_pet={
+name:"Doo",
+species:'Dog',
+breed:'family',
+noise:'bark',
+makeNoise : function() {
+  return this.noise ;
+}
+  }
+
+  some_pet.makeNoise()
+
   // Answer Ends Here
   
   // 4. Create a constructor function for Pet objects, as described above. The constructor function should be responseible for setting

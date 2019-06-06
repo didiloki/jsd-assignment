@@ -19,7 +19,14 @@
   // - park
 
 // Answer Starts Here
-
+var Car = function(make, model, year){
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  return `Car is\n- ${this.make}\n- ${this.model}\n- ${this.year}\nand it can\n- drive\n- brake\n- park`
+}
+var Car1 = Car('Mazda', '2233232', 2016)
+console.log(Car1)
 // Answer Ends Here
 
 // 2. Create an Object literal that lines up with the following description. Store it in the variable 'pet_owner', below. Be sure to give it reasonable values for each of its properties.
@@ -33,7 +40,9 @@
   var pet_owner;
 
   // Answer Starts Here
-  
+  pet_owner = {name :'Mohammed',address:'Riyadh'}
+  pet_owner2 = {name:'Khalid',address:'makkah'}
+  console.log(`Evary Owner has\n- ${pet_owner.name}\n- ${pet_owner.address}`)
   // Answer Ends Here
   
   // 3. Create an Object literal that lines up with the following description. Store it in the variable `some_pet`, below.
@@ -51,7 +60,14 @@
   var some_pet;
   
   // Answer Starts Here
-  
+  some_pet = function(name, species, breed, noise){
+    this.name = name
+    this.species = species 
+    this.breed = breed
+    this.noise = noise
+    
+    return `Every 'pet' has:\n- ${this.name}\n- ${this.species}\n- ${this.noise}\nEvery pet can"\n- make ${this.noise}` 
+    }
   // Answer Ends Here
   
   // 4. Create a constructor function for Pet objects, as described above. The constructor function should be responseible for setting
@@ -60,7 +76,21 @@
   
   var Pet;
   // Answer Starts Here
-  
+  class Pet{
+    constructor(name, species, breed, noise){
+      this.name = name
+      this.species = species 
+      this.breed = breed
+      this.noise = noise
+    } 
+    makeNoise(noise){
+    return `make ${noise}`
+    }
+    }
+    const p = new Pet('dog', 'chperid', 'chperid', 'woof');
+    
+    console.log(`Every 'pet' has:\n- ${p.name}\n- ${p.species}\n- ${p.noise}\nEvery pet can"\n- make ${p.makeNoise='woof'}`) 
+    
   // Answer Ends Here
   
   module.exports = {
